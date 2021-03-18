@@ -6,7 +6,16 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Apache Maven 3.6.2') {
-                    sh 'mvn install'
+                    bat 'mvn clean compile'
+                }
+            }
+        }
+
+        stage ('Testing Stage') {
+
+            steps {
+                withMaven(maven : 'Apache Maven 3.6.2') {
+                    bat 'mvn test'
                 }
             }
         }

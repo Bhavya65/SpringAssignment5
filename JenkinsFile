@@ -1,6 +1,6 @@
 pipeline {
     tools {
-    	jdk 'jdk_1.8.0_221'
+    	jdk 'Java development kit 1.8'
   }
 
 

@@ -24,12 +24,6 @@ pipeline {
                 }
             }
         }
-       stage('SonarQube analysis') {
-            steps{
-            withSonarQubeEnv('SonarQube 4.6') {
-                bat 'mvn clean package sonar:sonar'
-       }
-    }
   }
 }
 }
